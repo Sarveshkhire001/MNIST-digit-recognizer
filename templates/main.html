@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+	<title>Digit Recognizer api</title>
+</head>
+<body>
+    <h1 style="text-align:center;">THIS APP RECOGNIZES HAND WRITTEN DIGITS</h1>
+    <h2 style="text-align:center;">upload your hand written digit from files and submit</h2>
+    <center>
+    <form action = "{{ url_for('upload_image_file') }}" method = "POST" enctype = "multipart/form-data">
+      <input type = "file" name = "file" />
+      <input type = "submit"/>
+    </form>
+    <br>
+    <br>
+	<p style="font-size:50px">{{ prediction_no }}</p>
+    </center>
+</body>
+</html>
